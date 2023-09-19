@@ -12,11 +12,12 @@ describe('App', () => {
   it('should display the value of the counter on the button', async () => {
     render(<App />);
     const button = screen.getByRole('button');
-    expect(button.innerHTML).toEqual('0')
+    const display = screen.getByTestId("display")
+    expect(display.innerHTML).toEqual('Counter: 0')
     await act(() => {
       button.click();
     })
-    expect(button.innerHTML).toEqual('1')
+    expect(display.innerHTML).toEqual('Counter: 1')
   })
 
 })
