@@ -2,7 +2,10 @@ import {useState} from "react";
 
 const CounterButton = () => {
     const [count, setCount] = useState(0);
-    return (<button onClick={() => setCount(count + 1)}>{ count }</button>);
+    return (<>
+        <div>Counter: {count}</div>
+        <button onClick={() => setCount(count + 1)}>increment</button>
+    </>);
 }
 
-export { CounterButton };
+export {CounterButton};
