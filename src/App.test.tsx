@@ -1,6 +1,7 @@
 import React from 'react';
 import {act, render, screen} from '@testing-library/react';
 import App from './App';
+import * as axe from 'axe-core';
 
 describe('App', () => {
   it('should render a button', () => {
@@ -19,5 +20,12 @@ describe('App', () => {
     })
     expect(display.innerHTML).toEqual('Counter: 1')
   })
+
+  it('should not throw accessibility errors', async() => {
+      const {container} = render(<App />);
+      const results = await axe.run(container)
+    console.log(results.violations)
+      expect(results.violations.length).toBe(0);
+    });
 
 })
