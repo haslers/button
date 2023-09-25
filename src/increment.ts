@@ -1,3 +1,3 @@
-export const increment = (amount = 1, operand: number) => {
-    return operand + amount
+export const increment = ( operand: number, by = 1) => {
+    return operand + by
 }
