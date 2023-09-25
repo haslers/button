@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {increment} from "../util/increment";
 
-const CounterButton = () => {
+const Counter = () => {
     const [count, setCount] = useState(0);
     return (<>
         <div data-testid="display">Counter: {count}</div>
@@ -9,6 +9,4 @@ const CounterButton = () => {
     </>);
 }
 
-
-
-export {CounterButton};
+export {Counter};

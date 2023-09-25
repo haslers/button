@@ -1,6 +1,6 @@
 import React from 'react';
 import {act, render, screen} from '@testing-library/react';
-import App from './components/App';
+import App from './App';
 import * as axe from 'axe-core';
 
 describe('App', () => {
