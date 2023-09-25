@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.38.1",
     "axe-core": "^4.8.1",
     "jest-canvas-mock": "^2.5.2"
   }
