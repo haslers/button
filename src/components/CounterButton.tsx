@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {increment} from "./increment";
+import {increment} from "../util/increment";
 
 const CounterButton = () => {
     const [count, setCount] = useState(0);
