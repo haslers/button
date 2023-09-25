@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    data-testid="display"
+  >
+    Counter: 
+    0
+  </div>,
+  <button
+    onClick={[Function]}
+  >
+    increment
+  </button>,
+]
+`;
