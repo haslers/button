@@ -14,4 +14,8 @@ test.describe('Counter', () => {
         await incrementButton.click()
         await expect(counter).toHaveText('Counter: 1')
     });
+
+    test('it should look the same as last time', async ({page}) => {
+        await expect(page).toHaveScreenshot();
+    })
 });
