@@ -11,7 +11,7 @@ describe('Counter', () => {
     expect(button).toBeInTheDocument();
   })
 
-  it('should display the value of the counter above the button', async () => {
+  it('should increment the displayed value if the button is clicked', async () => {
     render(<Counter/>);
     const button = screen.getByRole('button');
     const display = screen.getByTestId('display');
