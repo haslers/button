@@ -5,6 +5,11 @@ div {
     text-align: center;
 }
 
+button {
+    width: 20%;
+    align-self: center;
+}
+
 a {
     opacity: 0;
 }
