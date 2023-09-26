@@ -4,3 +4,7 @@ div {
     justify-content: center;
     text-align: center;
 }
+
+a {
+    opacity: 0;
+}
