@@ -8,8 +8,9 @@ div {
 button {
     width: 20%;
     align-self: center;
+
 }
 
 a {
-    opacity: 0;
+    display: none
 }

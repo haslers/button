@@ -8,7 +8,9 @@ test.beforeEach(async ({page}) => {
 
 test.describe('Counter', () => {
     test('increment a counter on clicking a button', async ({page}) => {
+        // eslint-disable-next-line testing-library/prefer-screen-queries
         const counter = page.getByText('Counter: ')
+        // eslint-disable-next-line testing-library/prefer-screen-queries
         const incrementButton = page.getByRole('button');
 
         await expect(counter).toHaveText('Counter: 0');
@@ -21,8 +23,8 @@ test.describe('Counter', () => {
     })
 
     test('it should be accessible', async({page}) => {
-        const accessibilityScanResults = await new AxeBuilder({ page }).analyze(); // 4
+        const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 
-        expect(accessibilityScanResults.violations).toEqual([]); // 5
+        expect(accessibilityScanResults.violations).toEqual([]);
     });
 });
