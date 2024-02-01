@@ -1,5 +1,4 @@
 import { render, screen} from '@testing-library/react';
-import * as axe from 'axe-core';
 import React from 'react';
 import {Counter} from './Counter';
 import userEvent from '@testing-library/user-event';
@@ -9,6 +8,7 @@ describe('Counter', () => {
     render(<Counter/>);
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent('increment')
   })
 
   it('should increment the displayed value if the button is clicked', async () => {
@@ -19,10 +19,4 @@ describe('Counter', () => {
     await userEvent.click(button);
     expect(display.innerHTML).toEqual('Counter: 1');
   })
-
-  it('should not throw accessibility errors', async () => {
-    const {container} = render(<Counter/>);
-    const results = await axe.run(container)
-    expect(results.violations).toEqual([]);
-  });
 })

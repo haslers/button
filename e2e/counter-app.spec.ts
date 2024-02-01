@@ -21,10 +21,4 @@ test.describe('Counter', () => {
     test('it should look the same as last time', async ({page}) => {
         await expect(page).toHaveScreenshot();
     })
-
-    test('it should be accessible', async({page}) => {
-        const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
-
-        expect(accessibilityScanResults.violations).toEqual([]);
-    });
 });

@@ -6,7 +6,7 @@ const Counter = () => {
   const [count, setCount] = useState(0);
   return (<>
     <div data-testid="display">Counter: {count}</div>
-    <button onClick={() => setCount(increment(count))}>increment</button>
+    <button style={{ opacity: "100%" }} onClick={() => setCount(increment(count, 1))}>increment</button>
   </>);
 }
 

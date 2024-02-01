@@ -10,6 +10,11 @@ Array [
   </div>,
   <button
     onClick={[Function]}
+    style={
+      Object {
+        "opacity": "100%",
+      }
+    }
   >
     increment
   </button>,
