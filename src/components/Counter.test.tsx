@@ -16,7 +16,7 @@ describe('Counter', () => {
     const button = screen.getByRole('button');
     const display = screen.getByTestId('display');
     expect(display.innerHTML).toEqual('Counter: 0');
-    await userEvent.click(button);
+    userEvent.click(button);
     expect(display.innerHTML).toEqual('Counter: 1');
   })
 })
